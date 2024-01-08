@@ -34,7 +34,7 @@ sessionProvider.plugInto (myWebService)
 | Name | Type | Default | Description | Note
 | ---- | -- | -- | -- | -- |
 | `name` | String | `'sid'` | name of the cookie |
-| `ttl` | int | 60 | time to live, in minutes | multiplied by 60, passed to the Redis [set](https://redis.io/commands/set/) command as the `EX` option
+| `ttl` | int | 60 | time to live, in minutes | defines the `expiresIn` JWT property
 | `claim` | Object | `{}` | the claim part of the JWT | the `sub` property is always overridden with the user info
 | `sign` | Object | `{}` | options for [sign ()](https://github.com/auth0/node-jsonwebtoken#jwtsignpayload-secretorprivatekey-options-callback) | 
 | `verify` | Object | `{}` | options for [verify ()](https://github.com/auth0/node-jsonwebtoken#jwtverifytoken-secretorpublickey-options-callback) | 
