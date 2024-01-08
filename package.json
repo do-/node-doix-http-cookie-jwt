@@ -1,6 +1,6 @@
 {
   "name": "doix-http-cookie-jwt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "doix http cookie based sessions using jwt",
   "main": "index.js",
   "files": ["/lib", "/badges"],
