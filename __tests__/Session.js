@@ -31,6 +31,10 @@ test ('auth', async () => {
 
 	const app = newApp (), svc = newSvc (app)
 
+	const rp0 = await getResponseFromWebService (svc, '/?type=users&part=current', {method: 'POST', body: '{}', headers: {Cookie: `sid=000000`}}, 8021)
+
+	expect (rp0.responseJson.content).toBeNull ()
+
 	const rp = await getResponseFromWebService (svc, '/?type=sessions&action=create', {method: 'POST', body: '{}'}, 8021)
 
 	const cookie = rp.headers ['set-cookie'] [0], sid = cookie.slice (4, cookie.indexOf (';'))
