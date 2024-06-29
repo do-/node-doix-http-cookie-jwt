@@ -1,6 +1,6 @@
 {
   "name": "doix-http-cookie-jwt",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "doix http cookie based sessions using jwt",
   "main": "index.js",
   "files": ["/lib", "/badges"],
@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/do-/node-doix-http-cookie-jwt#readme",
   "peerDependencies": {
-    "doix-http": "^1.0.2"
+    "doix-http": "^1.0.5"
   },
   "devDependencies": {
     "jest": "^29.3.1"
