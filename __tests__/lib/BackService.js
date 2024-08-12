@@ -6,6 +6,8 @@ module.exports = class extends WebService {
 		
 	    super (app, {
 	    
+			name: 'webBackEnd',
+
 			methods: ['POST'],
 
 			reader: new HttpParamReader ({
