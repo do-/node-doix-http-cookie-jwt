@@ -15,7 +15,7 @@ const newSvc = app => {
 
 	const svc = app.createBackService ()
 
-	new CookieJWT ({ttl: 10}).plugInto (svc)
+	new CookieJWT ({ttl: 10, name: 'sid'}).plugInto (svc)
 
 	return svc
 

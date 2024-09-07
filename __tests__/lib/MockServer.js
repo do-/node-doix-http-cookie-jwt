@@ -1,5 +1,5 @@
 const http = require ('http')
-const {HttpRouter} = require ('doix-http')
+const {HttpRouter} = require ('protocol-agnostic-router')
 const {Writable} = require ('stream')
 const winston = require ('winston')
 const logger = winston.createLogger({
@@ -43,7 +43,7 @@ module.exports = {
 			const a = []; for await (b of rp) a.push (b)
 
 			rp.responseText = Buffer.concat (a).toString ()
-			
+
 			if (rp.headers ['content-type'] === 'application/json; charset=utf-8') rp.responseJson = JSON.parse (rp.responseText)
 
 			return rp
